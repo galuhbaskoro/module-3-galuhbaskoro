@@ -4,10 +4,16 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: auto;
   box-sizing: border-box;
+}
+
+.body-height-auto {
+  height: auto;
 }
 
 .container {
@@ -60,6 +66,31 @@ button:hover {
   margin-bottom: 10px;
 }
 
-.hidden {
+.btn-hidden {
   display: none;
+}
+
+.container-width-100 {
+  width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px 50px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-back {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #68aa6d;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-bold {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
