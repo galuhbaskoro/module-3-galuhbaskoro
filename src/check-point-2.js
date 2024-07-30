@@ -10,8 +10,6 @@ triggerButton.addEventListener('click', function(){
 
 });
 
-// Back Button 
-
 
 // Random Recipe
 async function randomRecipe(endPoint){
@@ -109,7 +107,7 @@ async function randomRecipe(endPoint){
 
   // Adding button
   const btnConfirm = document.createElement('button');
-  btnConfirm.innerHTML = 'Back';
+  btnConfirm.innerHTML = 'Find Another Recipe';
   btnConfirm.className = 'btn-back';
   document.querySelector('.container').appendChild(btnConfirm);
 
