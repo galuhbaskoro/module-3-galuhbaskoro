@@ -14,14 +14,11 @@ triggerButton.addEventListener('click', function(){
 // Random Recipe
 async function randomRecipe(endPoint){
 
- // get the API url
- const url = endPoint;
-
  // fetching data
  try {
 
   // define response and get api url
-  const response = await fetch(url);
+  const response = await fetch(endPoint);
 
   // error handling of fetching data
   if(!response.ok){
@@ -31,8 +28,6 @@ async function randomRecipe(endPoint){
   // get data resource from API
   const dataResource = await response.json();
   let recipe = dataResource['meals'][0];
-
-  console.log(recipe);
 
   // define recipe 
   let recipeTitle = recipe['strMeal'];
@@ -83,7 +78,7 @@ async function randomRecipe(endPoint){
   // Adding Ingredients Title
   document.querySelector('.ingredients-title').innerHTML = '🛒 Ingredients:';
 
-  // Looping Ingredients data
+  // Ingredients data
   let i = 0;
   while(i < recipeIngredients.length){
    const ingsData = document.createElement('p');
