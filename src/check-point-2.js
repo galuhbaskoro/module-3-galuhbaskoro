@@ -30,16 +30,14 @@ async function randomRecipe(endPoint){
 
   // get data resource from API
   const dataResource = await response.json();
-  var recipe = dataResource['meals'][0];
-
-  console.log(recipe);
+  let recipe = dataResource['meals'][0];
 
   // define recipe 
-  var recipeTitle = recipe['strMeal'];
-  var recipeInstruction = recipe['strInstructions'];
-  var recipeImageSrc = recipe['strMealThumb'];
+  let recipeTitle = recipe['strMeal'];
+  let recipeInstruction = recipe['strInstructions'];
+  let recipeImageSrc = recipe['strMealThumb'];
   
-  var recipeIngredients = [];
+  let  recipeIngredients = [];
   recipeIngredients.push(
    recipe['strIngredient1'],
    recipe['strIngredient2'],
